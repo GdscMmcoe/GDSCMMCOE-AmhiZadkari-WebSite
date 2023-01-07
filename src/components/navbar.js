@@ -8,27 +8,22 @@ export default function NavBar() {
         {
             name: "Home",
             href: "/",
-            errorElement: <ErrorPage />,
         },
         {
             name: "About Us",
             href: "/about",
-            errorElement: <ErrorPage />,
         },
         {
             name: "Events",
             href: "/events",
-            errorElement: <ErrorPage />,
         },
         {
             name: "Join Us",
             href: "/join",
-            errorElement: <ErrorPage />,
         },
         {
             name: "Donate Us",
             href: "/donate",
-            errorElement: <ErrorPage />,
         },
     ];
 
