@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/GDSCMMCOE-AmhiZadkari-WebSite/static/css/main.750c0b9a.css",
+    "main.js": "/GDSCMMCOE-AmhiZadkari-WebSite/static/js/main.eed952e6.js",
+    "static/media/banner1.png": "/GDSCMMCOE-AmhiZadkari-WebSite/static/media/banner1.584616f818d5d5830a1b.png",
+    "index.html": "/GDSCMMCOE-AmhiZadkari-WebSite/index.html",
+    "main.750c0b9a.css.map": "/GDSCMMCOE-AmhiZadkari-WebSite/static/css/main.750c0b9a.css.map",
+    "main.eed952e6.js.map": "/GDSCMMCOE-AmhiZadkari-WebSite/static/js/main.eed952e6.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.750c0b9a.css",
+    "static/js/main.eed952e6.js"
+  ]
+}
