@@ -1,27 +1,34 @@
 import { useState } from "react";
-import logo from "../images/logo.jpg";
+import { Link } from "react-router-dom";
+import banner from "../images/banner1.png";
+import ErrorPage from "../pages/ErrorPage";
 
 export default function NavBar() {
     var routes = [
         {
             name: "Home",
-            href: "#home",
+            href: "/",
+            errorElement: <ErrorPage />,
         },
         {
             name: "About Us",
-            href: "#about",
+            href: "/about",
+            errorElement: <ErrorPage />,
         },
         {
             name: "Events",
-            href: "#events",
+            href: "/events",
+            errorElement: <ErrorPage />,
         },
         {
             name: "Join Us",
-            href: "#join",
+            href: "/join",
+            errorElement: <ErrorPage />,
         },
         {
             name: "Donate Us",
-            href: "#donate",
+            href: "/donate",
+            errorElement: <ErrorPage />,
         },
     ];
 
@@ -30,7 +37,7 @@ export default function NavBar() {
             <div className="navbar flex flex-col place-content-between w-full">
                 <div className="image flex border w-full px-5 justify-center">
                     {/*todo: center image*/}
-                    <img src={logo} alt="someimage" className="w-40 h-20" />
+                    <img src={banner} alt="someimage" className="h-40 w-max" />
                 </div>
 
                 <div className="flex flex-col w-full bg-black">
@@ -51,12 +58,12 @@ export default function NavBar() {
                     <nav className="navitems flex justify-center w-full md:flex hidden peer-checked:block md:py-2 md:border bg-black">
                         {routes.map((route) => {
                             return (
-                                <a
-                                    href={route.href}
+                                <Link
+                                    to={route.href}
                                     className="mx-2 pl-3 md:px-5 py-3 block md:inline text-white hover:bg-white hover:text-black"
                                 >
                                     {route.name}
-                                </a>
+                                </Link>
                             );
                         })}
                     </nav>
