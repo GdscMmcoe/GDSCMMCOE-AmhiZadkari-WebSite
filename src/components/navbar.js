@@ -1,9 +1,23 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import banner from "../images/banner1.png";
-import ErrorPage from "../pages/ErrorPage";
 
 export default function NavBar() {
+    const [fixed, setFixed] = useState("");
+    const [margin, setMargin] = useState("");
+
+    const listenScrollEvent = () => {
+        window.scrollY > 161 ? setFixed("fixed") : setFixed("");
+        window.scrollY > 161 ? setMargin("pb-20") : setMargin("");
+    };
+
+    useEffect(() => {
+        window.addEventListener("scroll", listenScrollEvent);
+        return () => {
+            window.removeEventListener("scroll", listenScrollEvent);
+        };
+    }, []);
+
     var routes = [
         {
             name: "Home",
@@ -29,13 +43,18 @@ export default function NavBar() {
 
     return (
         <>
-            <div className="navbar flex flex-col place-content-between w-full">
+            <div
+                className={
+                    "navbar flex flex-col place-content-between w-full " +
+                    margin
+                }
+            >
                 <div className="image flex border w-full px-5 justify-center">
                     {/*todo: center image*/}
                     <img src={banner} alt="someimage" className="h-40 w-max" />
                 </div>
 
-                <div className="flex flex-col w-full bg-black">
+                <div className={"flex flex-col w-full bg-black " + fixed}>
                     <input
                         type="checkbox"
                         id="menu"
