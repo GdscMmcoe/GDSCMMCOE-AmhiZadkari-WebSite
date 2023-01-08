@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/GDSCMMCOE-AmhiZadkari-WebSite/static/css/main.59183cd0.css",
-    "main.js": "/GDSCMMCOE-AmhiZadkari-WebSite/static/js/main.534449fb.js",
+    "main.css": "/GDSCMMCOE-AmhiZadkari-WebSite/static/css/main.e72a97e9.css",
+    "main.js": "/GDSCMMCOE-AmhiZadkari-WebSite/static/js/main.b31204ea.js",
     "static/media/banner1.png": "/GDSCMMCOE-AmhiZadkari-WebSite/static/media/banner1.584616f818d5d5830a1b.png",
     "index.html": "/GDSCMMCOE-AmhiZadkari-WebSite/index.html",
-    "main.59183cd0.css.map": "/GDSCMMCOE-AmhiZadkari-WebSite/static/css/main.59183cd0.css.map",
-    "main.534449fb.js.map": "/GDSCMMCOE-AmhiZadkari-WebSite/static/js/main.534449fb.js.map"
+    "main.e72a97e9.css.map": "/GDSCMMCOE-AmhiZadkari-WebSite/static/css/main.e72a97e9.css.map",
+    "main.b31204ea.js.map": "/GDSCMMCOE-AmhiZadkari-WebSite/static/js/main.b31204ea.js.map"
   },
   "entrypoints": [
-    "static/css/main.59183cd0.css",
-    "static/js/main.534449fb.js"
+    "static/css/main.e72a97e9.css",
+    "static/js/main.b31204ea.js"
   ]
 }
