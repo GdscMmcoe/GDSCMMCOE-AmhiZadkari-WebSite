@@ -51,7 +51,7 @@ export default function NavBar() {
             >
                 <div className="image flex border w-full px-5 justify-center">
                     {/*todo: center image*/}
-                    <img src={banner} alt="someimage" className="h-40 w-max" />
+                    <img src={banner} alt="someimage" className="w-max " />
                 </div>
 
                 <div className={"flex flex-col w-full bg-black " + fixed}>

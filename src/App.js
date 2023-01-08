@@ -6,8 +6,11 @@ import Donate from "./pages/DonateUsPage";
 import Events from "./pages/EventsPage";
 import JoinUs from "./pages/JoinUsPage";
 import ErrorPage from "./pages/ErrorPage";
+import { getEvents } from "./firebase";
 
 function App() {
+    getEvents();
+
     return (
         <>
             <BrowserRouter>
