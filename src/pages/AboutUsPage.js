@@ -1,9 +1,7 @@
 export default function AboutUs() {
     return (
         <>
-            <div>
-                <p>About Us</p>
-            </div>
+            <div className="pt-36 w-full">a</div>
         </>
     );
 }

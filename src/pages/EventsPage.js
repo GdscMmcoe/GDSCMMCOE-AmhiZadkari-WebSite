@@ -6,7 +6,7 @@ export default function Events() {
 
     return (
         <>
-            <div>
+            <div className="pt-24">
                 <h1>Our Events</h1>
                 {names.map((e) => {
                     return (
