@@ -1,22 +1,40 @@
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
-import banner from "../images/banner1.png";
+import { Link, useLocation } from "react-router-dom";
+import "@fontsource/roboto";
 
 export default function NavBar() {
-    const [fixed, setFixed] = useState("");
-    const [margin, setMargin] = useState("");
+    const [scroll, setScroll] = useState(false);
+    const [navBg, setNavBg] = useState("");
+    const [text, setText] = useState(
+        "text-white hover:underline underline-offset-8"
+    );
+    const location = useLocation();
 
     const listenScrollEvent = () => {
-        window.scrollY > 161 ? setFixed("fixed") : setFixed("");
-        window.scrollY > 161 ? setMargin("pb-20") : setMargin("");
+        if (window.scrollY <= 10) {
+            setScroll(false);
+            setNavBg("bg-transparent");
+            setText("text-white hover:underline underline-offset-8");
+        } else if (window.scrollY > 10 && !scroll) {
+            setScroll(true);
+            setNavBg("bg-green-400");
+            setText("text-black hover:underline underline-offset-8");
+        }
     };
 
     useEffect(() => {
-        window.addEventListener("scroll", listenScrollEvent);
-        return () => {
-            window.removeEventListener("scroll", listenScrollEvent);
-        };
-    }, []);
+        if (location.pathname === "/") {
+            setNavBg("");
+            setText("text-white hover:underline underline-offset-8");
+            window.addEventListener("scroll", listenScrollEvent);
+            return () => {
+                window.removeEventListener("scroll", listenScrollEvent);
+            };
+        } else {
+            setNavBg("bg-green-400");
+            setText("text-black hover:underline underline-offset-8");
+        }
+    }, [location]);
 
     var routes = [
         {
@@ -45,36 +63,46 @@ export default function NavBar() {
         <>
             <div
                 className={
-                    "navbar flex flex-col place-content-between w-full " +
-                    margin
+                    "navbar flex flex-col w-full fixed z-10 font-['Roboto'] " +
+                    navBg
                 }
             >
-                <div className="image flex border w-full px-5 justify-center">
-                    {/*todo: center image*/}
-                    <img src={banner} alt="someimage" className="w-max " />
-                </div>
+                {/* <div className="image flex border w-full px-5 justify-center">
+                    <img src={banner} alt="someimage" className="w-42 " />
+                </div> */}
 
-                <div className={"flex flex-col w-full bg-black " + fixed}>
+                <div className="flex flex-col md:flex-row w-full ">
                     <input
                         type="checkbox"
                         id="menu"
                         className="peer invisible w-0 h-0 appearance-none"
                     />
                     <div className="w-full flex flex-row place-content-between md:hidden block">
-                        <label className="text-white py-5 px-5">Menu </label>
+                        <label className="py-5 px-5 text-white">
+                            Amhi Zadkari
+                        </label>
                         <label for="menu" className="flex flex-col peer py-2">
                             <span className="border-t-2 border-white w-9 h-3 mt-3 mr-2"></span>
                             <span className="border-t-2 border-white w-9 h-3 mr-2"></span>
                             <span className="border-t-2 border-white w-9 h-3 mr-2"></span>
                         </label>
                     </div>
-
-                    <nav className="navitems flex justify-center w-full md:flex hidden peer-checked:block md:py-2 md:border bg-black">
+                    <div className="w-48 py-5 text-white px-5 hidden md:block">
+                        <p>Amhi Zadkari</p>
+                    </div>
+                    <nav
+                        className={
+                            "navitems flex w-full justify-end lg:pr-32 lg:justify-center md:flex hidden peer-checked:block peer-checked:bg-green-400 md:py-2 "
+                        }
+                    >
                         {routes.map((route) => {
                             return (
                                 <Link
                                     to={route.href}
-                                    className="mx-2 pl-3 md:px-5 py-3 block md:inline text-white hover:bg-white hover:text-black"
+                                    className={
+                                        "mx-2 pl-3 lg:px-5 md:px-3 py-3 block md:inline " +
+                                        text
+                                    }
                                 >
                                     {route.name}
                                 </Link>
