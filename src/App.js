@@ -7,6 +7,7 @@ import Events from "./pages/EventsPage";
 import JoinUs from "./pages/JoinUsPage";
 import ErrorPage from "./pages/ErrorPage";
 import { getEvents } from "./firebase";
+import Footer from "./components/Footer";
 
 function App() {
     getEvents();
@@ -23,6 +24,7 @@ function App() {
                     <Route path="/join" element={<JoinUs />} />
                     <Route path="*" element={<ErrorPage />} />
                 </Routes>
+                <Footer />
             </BrowserRouter>
         </>
     );
