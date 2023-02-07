@@ -5,34 +5,38 @@ import "@fontsource/roboto";
 export default function NavBar() {
     const [scroll, setScroll] = useState(false);
     const [navBg, setNavBg] = useState("");
-    const [text, setText] = useState(
-        "text-white hover:underline underline-offset-8"
-    );
+    const [text, setText] = useState("text-white");
+    const [lineColor, setLineColor] = useState("from-white to-white");
+
     const location = useLocation();
 
     const listenScrollEvent = () => {
         if (window.scrollY <= 10) {
             setScroll(false);
             setNavBg("bg-transparent");
-            setText("text-white hover:underline underline-offset-8");
+            setText("text-white");
+            setLineColor("from-white to-white");
         } else if (window.scrollY > 10 && !scroll) {
             setScroll(true);
-            setNavBg("bg-green-400");
-            setText("text-black hover:underline underline-offset-8");
+            setNavBg("bg-green-600");
+            setText("text-black");
+            setLineColor("from-black to-black");
         }
     };
 
     useEffect(() => {
         if (location.pathname === "/") {
-            setNavBg("");
-            setText("text-white hover:underline underline-offset-8");
+            setNavBg("bg-transparent");
+            setText("text-white");
+            setLineColor("from-white to-white");
             window.addEventListener("scroll", listenScrollEvent);
             return () => {
                 window.removeEventListener("scroll", listenScrollEvent);
             };
         } else {
-            setNavBg("bg-green-400");
-            setText("text-black hover:underline underline-offset-8");
+            setNavBg("bg-green-600");
+            setText("text-black");
+            setLineColor("from-black to-black");
         }
     }, [location]);
 
@@ -63,7 +67,7 @@ export default function NavBar() {
         <>
             <div
                 className={
-                    "navbar flex flex-col w-full fixed z-10 font-['Roboto'] " +
+                    "navbar flex flex-col w-full fixed z-10 font-['Roboto'] transition-all duration-300 ease-in-out " +
                     navBg
                 }
             >
@@ -97,15 +101,24 @@ export default function NavBar() {
                     >
                         {routes.map((route) => {
                             return (
-                                <Link
-                                    to={route.href}
-                                    className={
-                                        "mx-2 pl-3 lg:px-5 md:px-3 py-3 block md:inline " +
-                                        text
-                                    }
-                                >
-                                    {route.name}
-                                </Link>
+                                <>
+                                    <Link
+                                        to={route.href}
+                                        className={
+                                            "mx-2 pl-3 lg:px-5 md:px-3 py-3 block md:inline group transition-all duration-300 ease-in-out text-white " +
+                                            text
+                                        }
+                                    >
+                                        <span
+                                            className={
+                                                "mt-2 bg-left-bottom bg-gradient-to-r from-white to-white bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out " +
+                                                lineColor
+                                            }
+                                        >
+                                            {route.name}
+                                        </span>
+                                    </Link>
+                                </>
                             );
                         })}
                     </nav>
