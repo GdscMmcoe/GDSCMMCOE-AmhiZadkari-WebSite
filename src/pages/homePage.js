@@ -11,15 +11,15 @@ export default function HomePage() {
     return (
         <>
             <div className="-z-20 block overflow-hidden ">
-                <div className="overflow-hidden brightness-75 w-max relative">
+                <div className="overflow-hidden w-max relative">
                     <video loop autoPlay muted playsInline>
                         <source src={forest} type="video/mp4"></source>
                     </video>
                 </div>
 
-                <div className="body absolute top-1/4 text-white w-[50%]">
+                <div className="body absolute top-1/4 text-white md:w-[50%] mx-4">
                     <div>
-                        <p className="pl-16 text-5xl">
+                        <p className="md:pl-16 text-5xl">
                             Lorem ipsum dolor sit amet kasd. Et labore invidunt
                             sed illum amet et ipsum eos te nostrud invidunt.
                             Odio accusam no ut gubergren commodo amet dolores

@@ -1,5 +1,6 @@
-import { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import { Link, useLocation } from "react-router-dom";
+
 import "@fontsource/roboto";
 
 export default function NavBar() {
@@ -7,8 +8,16 @@ export default function NavBar() {
     const [navBg, setNavBg] = useState("");
     const [text, setText] = useState("text-white");
     const [lineColor, setLineColor] = useState("from-white to-white");
-
+    const menuRef = useRef();
     const location = useLocation();
+
+    function menuClicked() {
+        if (menuRef.current.checked) {
+            setNavBg("bg-black");
+        } else {
+            setNavBg("bg-transparent");
+        }
+    }
 
     const listenScrollEvent = () => {
         if (window.scrollY <= 10) {
@@ -18,9 +27,7 @@ export default function NavBar() {
             setLineColor("from-white to-white");
         } else if (window.scrollY > 10 && !scroll) {
             setScroll(true);
-            setNavBg("bg-green-600");
-            setText("text-black");
-            setLineColor("from-black to-black");
+            setNavBg("bg-black");
         }
     };
 
@@ -30,13 +37,14 @@ export default function NavBar() {
             setText("text-white");
             setLineColor("from-white to-white");
             window.addEventListener("scroll", listenScrollEvent);
+            document
+                .getElementById("menu")
+                .addEventListener("change", menuClicked);
             return () => {
                 window.removeEventListener("scroll", listenScrollEvent);
             };
         } else {
-            setNavBg("bg-green-600");
-            setText("text-black");
-            setLineColor("from-black to-black");
+            setNavBg("bg-black");
         }
     }, [location]);
 
@@ -71,18 +79,15 @@ export default function NavBar() {
                     navBg
                 }
             >
-                {/* <div className="image flex border w-full px-5 justify-center">
-                    <img src={banner} alt="someimage" className="w-42 " />
-                </div> */}
-
                 <div className="flex flex-col md:flex-row w-full ">
                     <input
                         type="checkbox"
                         id="menu"
                         className="peer invisible w-0 h-0 appearance-none"
+                        ref={menuRef}
                     />
                     <div className="w-full flex flex-row place-content-between md:hidden block">
-                        <label className="py-5 px-5 text-white">
+                        <label className="py-5 px-5 text-3xl font-bold text-white">
                             Amhi Zadkari
                         </label>
                         <label for="menu" className="flex flex-col peer py-2">
@@ -96,7 +101,7 @@ export default function NavBar() {
                     </div>
                     <nav
                         className={
-                            "navitems flex w-full justify-end lg:pr-32 lg:justify-center md:flex hidden peer-checked:block peer-checked:bg-green-400 md:py-2 "
+                            "navitems flex w-full justify-end lg:pr-32 lg:justify-center md:flex hidden peer-checked:block peer-checked:bg-black md:py-2 "
                         }
                     >
                         {routes.map((route) => {
@@ -111,7 +116,7 @@ export default function NavBar() {
                                     >
                                         <span
                                             className={
-                                                "mt-2 bg-left-bottom bg-gradient-to-r from-white to-white bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out " +
+                                                "mt-2 bg-left-bottom text-xl font-medium bg-gradient-to-r from-white to-white bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out " +
                                                 lineColor
                                             }
                                         >
