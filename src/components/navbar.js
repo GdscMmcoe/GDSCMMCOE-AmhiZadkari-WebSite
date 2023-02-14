@@ -5,14 +5,14 @@ import "@fontsource/roboto";
 
 export default function NavBar() {
     const [scroll, setScroll] = useState(false);
-    const [navBg, setNavBg] = useState("");
+    const menuRef = useRef();
+    const [navBg, setNavBg] = useState("bg-black");
     const [text, setText] = useState("text-white");
     const [lineColor, setLineColor] = useState("from-white to-white");
-    const menuRef = useRef();
     const location = useLocation();
 
     function menuClicked() {
-        if (menuRef.current.checked) {
+        if (menuRef.current.checked && !location.pathname === "/") {
             setNavBg("bg-black");
         } else {
             setNavBg("bg-transparent");
@@ -20,7 +20,7 @@ export default function NavBar() {
     }
 
     const listenScrollEvent = () => {
-        if (window.scrollY <= 10) {
+        if (window.scrollY <= 10 && !menuRef.current.checked) {
             setScroll(false);
             setNavBg("bg-transparent");
             setText("text-white");
@@ -87,7 +87,7 @@ export default function NavBar() {
                         ref={menuRef}
                     />
                     <div className="w-full flex flex-row place-content-between md:hidden block">
-                        <label className="py-5 px-5 text-3xl font-bold text-white">
+                        <label className="py-5 px-5 text-2xl font-bold text-white">
                             Amhi Zadkari
                         </label>
                         <label for="menu" className="flex flex-col peer py-2">
@@ -100,9 +100,8 @@ export default function NavBar() {
                         <p>Amhi Zadkari</p>
                     </div>
                     <nav
-                        className={
-                            "navitems flex w-full justify-end lg:pr-32 lg:justify-center md:flex hidden peer-checked:block peer-checked:bg-black md:py-2 "
-                        }
+                        className="navitems flex w-full justify-end lg:pr-32 lg:justify-center md:flex hidden peer-checked:block peer-checked:bg-black md:py-2 "
+
                     >
                         {routes.map((route) => {
                             return (
