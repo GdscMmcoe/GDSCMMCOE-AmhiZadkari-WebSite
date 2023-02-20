@@ -1,4 +1,4 @@
-import treehand from '../assets/images/treehand.png';
+import treehand from '../assets/images/icons/treehand.png';
 
 
 
@@ -17,14 +17,14 @@ export default function AboutUs() {
                             The AmhiZadkari community is made up of like-minded, nature-loving folks who have teamed together to work towards the plantation revolution. The organisation is entirely run by volunteers, and all of the participants are extremely focused and self-motivated, ensuring that passion never dries up, as our plants never dry up.
                         </p>
                     </div>
-                    <div className='w-1/3 self-center pl md:flex hidden justify-end'>
-                        <img src={treehand} className="w-48 h-48" />
+                    <div className='w-1/3 self-center pl-4 md:flex hidden justify-end'>
+                        <img src={treehand} className="w-64 h-64" />
                     </div>
                 </div>
 
                 <div className="flex lg:w-2/3 w-full flex-row justify-end  pt-4 py-4 my-4 self-center md:self-end">
-                    <div className='w-1/3 self-center pl md:flex hidden justify-start'>
-                        <img src={treehand} className="w-48 h-48" />
+                    <div className='w-1/3 self-center pr-4 md:flex hidden justify-start'>
+                        <img src={treehand} className="w-64 h-64" />
                     </div>
                     <div className='w-full md:w-2/3 md:border-4 md:rounded-l-[4rem] px-8'>
                         <p className="text-2xl font-medium pt-4 flex md:justify-start justify-center">
@@ -49,14 +49,14 @@ export default function AboutUs() {
                             Not merely this. This is simply one part of how we work. We also engage in several public activities, the primary goal of which is to raise public awareness of our work, its effects, and consequences, and eventually connect this incredible revolution with an increasing number of individuals.
                         </p>
                     </div>
-                    <div className='w-1/3 self-center pl md:flex hidden justify-end'>
-                        <img src={treehand} className="w-48 h-48" />
+                    <div className='w-1/3 self-center pl-4 md:flex hidden justify-end'>
+                        <img src={treehand} className="w-64 h-64" />
                     </div>
                 </div>
 
-                <div className="flex flex-col justify-end px-8 md:px-28 pt-4 py-4 my-4 border self-center md:self-end align-end">
-                    <div>
-                        <p className="text-2xl font-medium flex md:justify-start justify-center">
+                <div className="flex md:flex-row flex-col w-full text-justify pt-32">
+                    <div className='w-full px-4 lg:px-32'>
+                        <p className="text-2xl font-medium flex justify-center">
                             Importance of plantation
                         </p>
                         <p className="py-4 ">
@@ -77,11 +77,9 @@ export default function AboutUs() {
                             Plantation is a critical component of efforts to maintain a sustainable planet. It helps to combat climate change, prevent soil erosion, support biodiversity, provide economic benefits, and provide a range of other important benefits. By promoting and supporting plantation, we can work towards a sustainable and healthy planet for all.
                         </p>
                     </div>
-                </div>
 
-                <div className="flex flex-col justify-end px-8 md:px-28 pt-4 border self-center md:self-end align-end">
-                    <div>
-                        <p className="text-2xl font-medium flex md:justify-start justify-center">
+                    <div className='w-full px-4 lg:px-16'>
+                        <p className="text-2xl font-medium flex justify-center">
                             What kind of things we are involved in
                         </p>
                         <p className="py-4 ">
@@ -89,7 +87,6 @@ export default function AboutUs() {
                         </p>
                     </div>
                 </div>
-
             </div>
         </>
     );

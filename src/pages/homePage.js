@@ -1,13 +1,23 @@
 import forest from "../assets/videos/forest.mov";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
+import img1 from '../assets/images/photos/0.jpg'
+import img2 from '../assets/images/photos/1.jpg'
+import img3 from '../assets/images/photos/2.jpg'
+import img4 from '../assets/images/photos/3.jpg'
+import img5 from '../assets/images/photos/4.jpg'
+import img6 from '../assets/images/photos/5.jpg'
+import img7 from '../assets/images/photos/6.jpg'
+import img8 from '../assets/images/photos/7.jpg'
+import img9 from '../assets/images/photos/8.jpg'
+import img10 from '../assets/images/photos/9.jpg'
 
-import image1 from "../assets/images/banner1-crop.png";
-import image2 from "../assets/images/banner1.png";
-import icon from "../assets/images/icon.png";
-import team from "../assets/images/team.jpg";
+import icon from "../assets/images/icons/icon.png";
 
 export default function HomePage() {
+
+    const images = [img1, img2, img3, img4, img5, img6, img7, img8, img9, img10]
+
     return (
         <>
             <div className="-z-20 block overflow-hidden ">
@@ -29,27 +39,33 @@ export default function HomePage() {
                 </div>
             </div>
 
-            <div className="flex justify-center carousel py-32 px-16">
+            <div className="flex justify-center carousel py-32 ">
                 <Carousel
                     autoPlay
                     stopOnHover={false}
-                    showStatus={false}
-                    showIndicators={false}
+                    showStatus={true}
+                    showIndicators={true}
+                    showArrows={true}
+                    emulateTouch={true}
+                    interval={5000}
                     showThumbs={false}
                     infiniteLoop
-                    className=""
+                    className="w-full bg-gray-300 mx-0 bg-gradient-to-r from-gray-100 via-gray-300 to-gray-100"
                 >
-                    <div>
-                        <img src={image1} />
-                    </div>
-                    <div>
-                        <img src={image2} />
-                    </div>
+                    {
+                        images.map((image) => {
+                            return (
+                                <div>
+                                    <img src={image} className="object-scale-down h-[800px]" />
+                                </div>
+                            )
+                        })
+                    }
                 </Carousel>
             </div>
 
             <div className="team-numbers w-full flex justify-center relative">
-                <img src={team} className="opacity-50" alt=""></img>
+                <img src={img9} className="opacity-80" alt=""></img>
 
                 <div className="absolute top-24 lg:top-56 md:top-64 lg:px-32 flex flex-row w-full place-content-evenly">
                     <div className="card flex flex-col">
