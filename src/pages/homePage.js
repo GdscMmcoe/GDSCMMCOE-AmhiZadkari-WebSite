@@ -13,16 +13,47 @@ import img9 from '../assets/images/photos/8.jpg'
 import img10 from '../assets/images/photos/9.jpg'
 
 import icon from "../assets/images/icons/icon.png";
+import { useEffect, useRef, useState } from "react";
 
 export default function HomePage() {
+
+    const [loading, setLoading] = useState(true)
+
+    const onLoadedData = () => {
+        setLoading(false);
+    };
+
+
+
+    useEffect(() => {
+
+    })
 
     const images = [img1, img2, img3, img4, img5, img6, img7, img8, img9, img10]
 
     return (
         <>
+
             <div className="-z-20 block overflow-hidden ">
+
                 <div className="overflow-hidden w-max relative">
-                    <video loop autoPlay muted preload="auto" playsInline className="w-full object-cover">
+                    <img
+                        src="data:image/gif;base64,R0lGODlhAQABAIAAAAUEBAAAACwAAAAAAQABAAACAkQBADs="
+                        style={{ display: loading ? "block" : "none" }}
+                        className="w-full object-cover w-[1920px] h-[1080px]"
+                    />
+                </div>
+                <div className="overflow-hidden w-max relative">
+                    <video
+                        loop
+                        autoPlay
+                        muted
+                        preload="auto"
+                        playsInline
+                        className="w-full object-cover"
+                        onLoadedData={onLoadedData}
+                        style={{ display: loading ? "none" : "block" }}
+                    >
                         <source src={forest} type="video/mp4" ></source>
                     </video>
                 </div>
@@ -100,6 +131,9 @@ export default function HomePage() {
                     </div>
                 </div>
             </div>
+
         </>
+
+
     );
 }

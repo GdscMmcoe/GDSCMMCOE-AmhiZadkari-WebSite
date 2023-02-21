@@ -1,7 +1,7 @@
 {
   "name": "amhi-zadkari-website",
   "version": "0.1.0",
-  "homepage": "https://gdscmmcoe.github.io/GDSCMMCOE-AmhiZadkari-WebSite/",
+  "homepage": "https://gdscmmcoe.github.io/",
   "private": true,
   "dependencies": {
     "@fontsource/roboto": "^4.5.8",
