@@ -81,7 +81,7 @@ export default function HomePage() {
                     interval={5000}
                     showThumbs={false}
                     infiniteLoop
-                    className="w-full bg-gray-300 mx-0 bg-gradient-to-r from-gray-100 via-gray-300 to-gray-100"
+                    className="w-full mx-0 bg-gradient-to-r from-gray-100 via-gray-300 to-gray-100"
                 >
                     {
                         images.map((image) => {
