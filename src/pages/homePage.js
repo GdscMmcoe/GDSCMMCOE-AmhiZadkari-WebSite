@@ -1,21 +1,15 @@
 import forest from "../assets/videos/forest.mov";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
-import { Carousel } from "react-responsive-carousel";
-import img1 from '../assets/images/photos/0.jpg'
-import img2 from '../assets/images/photos/1.jpg'
-import img3 from '../assets/images/photos/2.jpg'
-import img4 from '../assets/images/photos/3.jpg'
-import img5 from '../assets/images/photos/4.jpg'
-import img6 from '../assets/images/photos/5.jpg'
-import img7 from '../assets/images/photos/6.jpg'
-import img8 from '../assets/images/photos/7.jpg'
 import img9 from '../assets/images/photos/8.jpg'
-import img10 from '../assets/images/photos/9.jpg'
-
+import { Link } from "react-router-dom";
 import icon from "../assets/images/icons/icon.png";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
+import EventCard from "../components/EventCard";
 
 export default function HomePage() {
+
+    const events = Object(JSON.parse(localStorage.getItem("events")));
+    const names = Object.keys(events);
 
     const [loading, setLoading] = useState(true)
 
@@ -29,10 +23,9 @@ export default function HomePage() {
 
     })
 
-    const images = [img1, img2, img3, img4, img5, img6, img7, img8, img9, img10]
 
     return (
-        <>
+        <div className="font-[Roboto] pb-24">
 
             <div className="-z-20 block overflow-hidden ">
 
@@ -43,7 +36,7 @@ export default function HomePage() {
                         className="w-full object-cover w-[1920px] h-[1080px]"
                     />
                 </div>
-                <div className="overflow-hidden w-max relative">
+                <div className="overflow-hidden w-max relative brightness-75">
                     <video
                         loop
                         autoPlay
@@ -60,39 +53,36 @@ export default function HomePage() {
 
                 <div className="body absolute top-2/3 text-white md:w-[50%] mx-4">
                     <div>
-                        <p className="md:pl-16 text-5xl">
+                        <p className="md:pl-16 pb-3 text-5xl">
                             Amhi Zadkari
                         </p>
-                        <p className="md:pl-16 text-3xl text-left">
-                            Mansana nisargashi jodto amhi
+                        <p className="md:pl-16 text-3xl text-left underline underline-offset-3">
+                            मानसान्ना निसर्गाशी जोडतो आम्ही
                         </p>
                     </div>
                 </div>
             </div>
 
-            <div className="flex justify-center carousel py-32 ">
-                <Carousel
-                    autoPlay
-                    stopOnHover={false}
-                    showStatus={true}
-                    showIndicators={true}
-                    showArrows={true}
-                    emulateTouch={true}
-                    interval={5000}
-                    showThumbs={false}
-                    infiniteLoop
-                    className="w-full mx-0 bg-gradient-to-r from-gray-100 via-gray-300 to-gray-100"
-                >
-                    {
-                        images.map((image) => {
-                            return (
-                                <div>
-                                    <img src={image} className="object-scale-down h-[800px]" />
-                                </div>
-                            )
-                        })
-                    }
-                </Carousel>
+            <div className="info-title pt-16 w-full flex justify-center text-4xl font-bold underline underline-offset-8 pb-4 decoration-green-600">
+                <p>welcome to</p> <p className="text-green-600">&nbsp;Amhi Zadkari</p>
+            </div>
+            <div className="info-text pt-1 w-full flex flex-col justify-center items-center text-justify text-xl px-16 lg:px-80">
+                <p>
+                    Amhi Zadkari is a government-registered non-governmental organisation (NGO) that is concerned about the current climate challenges and works to repair and stop additional harm by way of planting trees. We are a group made almost entirely of volunteers. Our primary aim is to encourage people and spread awareness about the importance of plantation.
+                </p>
+                <button className="bg-lime-600 w-32 h-12 mt-4 text-lg text-white font-medium hover:bg-lime-900"><Link to={"/about"}>LEARN MORE</Link></button>
+            </div>
+
+            <div className="flex justify-center items-center flex-col py-32 ">
+
+                <p className="text-3xl text-green-600">OUR WORK</p>
+                <div className="flex flex-wrap flex-row lg:justify-start justify-center md:ml-4">
+                    {names.map((e) => {
+                        return (
+                            <EventCard id={events[e].eventId} name={e} content={events[e].eventContent} src={events[e].eventImage} />
+                        );
+                    })}
+                </div>
             </div>
 
             <div className="team-numbers w-full flex justify-center relative">
@@ -132,7 +122,7 @@ export default function HomePage() {
                 </div>
             </div>
 
-        </>
+        </div>
 
 
     );

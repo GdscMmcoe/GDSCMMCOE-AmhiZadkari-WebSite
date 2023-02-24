@@ -5,7 +5,7 @@ import treehand from '../assets/images/icons/treehand.png';
 export default function AboutUs() {
     return (
         <>
-            <div className="pt-16 w-full flex flex-col">
+            <div className="py-24 w-full flex flex-col">
 
                 <div className="flex w-full lg:w-2/3 flex-row justify-end pt-8 py-4 my-4 self-center md:self-start">
                     <div className="w-full md:w-2/3 md:border-4 md:rounded-r-[4rem] px-8 ">

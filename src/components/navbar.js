@@ -11,7 +11,7 @@ export default function NavBar() {
     const [lineColor, setLineColor] = useState("from-black to-black");
     const location = useLocation();
 
-    const staticNavBgColor = "bg-gradient-to-r from-green-600 to-green-900"
+    const staticNavBgColor = "bg-gradient-to-r from-green-500 to-green-900"
 
     const initialTextColor = "white"
     // const scrollingTextColor = "green-600"
@@ -31,11 +31,9 @@ export default function NavBar() {
     };
 
     useEffect(() => {
+        window.scrollTo(0, 0)
         menuRef.current.checked = false
         if (location.pathname === "/") {
-            setNavBg(`md:bg-transparent md:bg-none ${staticNavBgColor}`);
-            setText(`text-${initialTextColor}`);
-            setLineColor(`from-${initialTextColor} to-${initialTextColor}`);
             window.addEventListener("scroll", listenScrollEvent);
             return () => {
                 window.removeEventListener("scroll", listenScrollEvent);

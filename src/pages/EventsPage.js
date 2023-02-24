@@ -7,12 +7,7 @@ export default function Events() {
     return (
         <>
             <div className="pt-24">
-                <h1>Our Events</h1>
-                {names.map((e) => {
-                    return (
-                        <EventCard name={e} content={events[e].eventContent} />
-                    );
-                })}
+                To be removed
             </div>
         </>
     );
