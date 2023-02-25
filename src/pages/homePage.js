@@ -9,7 +9,7 @@ import EventCard from "../components/EventCard";
 export default function HomePage() {
 
     const events = Object(JSON.parse(localStorage.getItem("events")));
-    const names = Object.keys(events);
+    const names = Object.keys(events).slice(0, 4);
 
     const [loading, setLoading] = useState(true)
 
@@ -25,7 +25,7 @@ export default function HomePage() {
 
 
     return (
-        <div className="font-[Roboto] pb-24">
+        <div className="pb-24">
 
             <div className="-z-20 block overflow-hidden ">
 
@@ -70,7 +70,7 @@ export default function HomePage() {
                 <p>
                     Amhi Zadkari is a government-registered non-governmental organisation (NGO) that is concerned about the current climate challenges and works to repair and stop additional harm by way of planting trees. We are a group made almost entirely of volunteers. Our primary aim is to encourage people and spread awareness about the importance of plantation.
                 </p>
-                <button className="bg-lime-600 w-32 h-12 mt-4 text-lg text-white font-medium hover:bg-lime-900"><Link to={"/about"}>LEARN MORE</Link></button>
+                <Link to="/about" className="bg-lime-600 w-32 h-12 mt-4 text-lg text-white font-medium hover:bg-lime-900 flex flex-col justify-center items-center">LEARN MORE</Link>
             </div>
 
             <div className="flex justify-center items-center flex-col py-32 ">
@@ -79,10 +79,11 @@ export default function HomePage() {
                 <div className="flex flex-wrap flex-row lg:justify-start justify-center md:ml-4">
                     {names.map((e) => {
                         return (
-                            <EventCard id={events[e].eventId} name={e} content={events[e].eventContent} src={events[e].eventImage} />
+                            <EventCard id={events[e].eventId} name={e} content={events[e].eventContent} src={events[e].eventImage} date={events[e].eventDate} />
                         );
                     })}
                 </div>
+                <Link to="/events" className="bg-green-600 py-2 ml-4 px-4 mt-8 text-xl text-white font-medium hover:bg-green-900">SEE ALL</Link>
             </div>
 
             <div className="team-numbers w-full flex justify-center relative">

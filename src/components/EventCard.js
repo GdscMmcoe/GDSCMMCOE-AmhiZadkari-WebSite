@@ -6,15 +6,12 @@ export default function EventCard(props) {
             <div className="">
                 <img src={props.src} alt="img" className="pb-2 w-full h-48"></img>
                 <p className="font-bold px-2 text-lg">{props.name}</p>
+                <p className="font-light pl-2 text-sm">{props.date}</p>
                 <p className="px-2">{props.content.split(/\s+/).slice(0, 30).join(" ")}...</p>
             </div>
-            <button
-                className="hover:cursor-pointer mb-4 self-center mt-4 border h-10 w-32 bg-lime-600 text-white"
-            >
-                <Link to={`/event/${props.id}`}>
-                    READ MORE
-                </Link>
-            </button>
+            <Link to={`/event/${props.id}`} className="flex flex-col justify-center items-center hover:cursor-pointer mb-4 self-center mt-4 border h-10 w-32 bg-lime-600 text-white">
+                READ MORE
+            </Link>
         </div >
     );
 }

@@ -14,7 +14,7 @@ function App() {
     getEvents();
 
     return (
-        <>
+        <div className="font-['Roboto']">
             <BrowserRouter>
                 <NavBar />
                 <Routes>
@@ -28,7 +28,7 @@ function App() {
                 </Routes>
                 <Footer />
             </BrowserRouter>
-        </>
+        </div>
     );
 }
 
