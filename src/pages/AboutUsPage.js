@@ -6,9 +6,10 @@ export default function AboutUs() {
     return (
         <>
             <div className="py-24 w-full flex flex-col">
+                <p className='self-center font-extrabold text-5xl'>OUR JOURNEY</p>
 
-                <div className="flex w-full lg:w-2/3 flex-row justify-end pt-8 py-4 my-4 self-center md:self-start">
-                    <div className="w-full md:w-2/3 md:border-4 md:rounded-r-[4rem] px-8 ">
+                <div className="flex w-full flex-row justify-end pt-8 py-4 my-4 self-center md:self-start">
+                    <div className="w-full md:w-1/2 md:border-4 md:rounded-r-[4rem] px-8 ">
                         <p className="text-2xl font-medium flex md:justify-start justify-center pt-4">
                             What is Zadkari?
                         </p>
@@ -17,16 +18,16 @@ export default function AboutUs() {
                             The AmhiZadkari community is made up of like-minded, nature-loving folks who have teamed together to work towards the plantation revolution. The organisation is entirely run by volunteers, and all of the participants are extremely focused and self-motivated, ensuring that passion never dries up, as our plants never dry up.
                         </p>
                     </div>
-                    <div className='w-1/3 self-center pl-4 md:flex hidden justify-end'>
+                    <div className='w-1/2 self-center pl-4 md:flex hidden justify-center'>
                         <img src={treehand} className="w-64 h-64" />
                     </div>
                 </div>
 
-                <div className="flex lg:w-2/3 w-full flex-row justify-end  pt-4 py-4 my-4 self-center md:self-end">
-                    <div className='w-1/3 self-center pr-4 md:flex hidden justify-start'>
+                <div className="flex w-full flex-row justify-end pt-4 py-4 my-4 self-center md:self-end">
+                    <div className='w-1/2 self-center pr-4 md:flex hidden justify-center'>
                         <img src={treehand} className="w-64 h-64" />
                     </div>
-                    <div className='w-full md:w-2/3 md:border-4 md:rounded-l-[4rem] px-8'>
+                    <div className='w-full md:w-1/2 md:border-4 md:rounded-l-[4rem] px-8'>
                         <p className="text-2xl font-medium pt-4 flex md:justify-start justify-center">
                             How Zadkari came to existence?
                         </p>
@@ -37,8 +38,8 @@ export default function AboutUs() {
                     </div>
                 </div>
 
-                <div className="flex lg:w-2/3 flex-row justify-end pt-4 py-4 my-4  self-center md:self-start">
-                    <div className='w-full md:w-2/3  md:border-4 md:rounded-r-[4rem] px-8'>
+                <div className="flex w-full flex-row justify-end pt-4 py-4 my-4  self-center md:self-start">
+                    <div className='w-full md:w-1/2  md:border-4 md:rounded-r-[4rem] px-8'>
                         <p className="text-2xl font-medium flex md:justify-start justify-center">
                             Our motto
                         </p>
@@ -49,7 +50,7 @@ export default function AboutUs() {
                             Not merely this. This is simply one part of how we work. We also engage in several public activities, the primary goal of which is to raise public awareness of our work, its effects, and consequences, and eventually connect this incredible revolution with an increasing number of individuals.
                         </p>
                     </div>
-                    <div className='w-1/3 self-center pl-4 md:flex hidden justify-end'>
+                    <div className='w-1/2 self-center pl-4 md:flex hidden justify-center'>
                         <img src={treehand} className="w-64 h-64" />
                     </div>
                 </div>

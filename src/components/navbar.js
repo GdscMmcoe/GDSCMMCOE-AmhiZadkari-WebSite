@@ -1,14 +1,13 @@
 import { useEffect, useState, useRef } from "react";
 import { Link, useLocation } from "react-router-dom";
+import logo from "../assets/images/icons/banner1-crop.png"
 
-import "@fontsource/roboto";
 
 export default function NavBar() {
-    const [scroll, setScroll] = useState(false);
     const [navBg, setNavBg] = useState("");
     const menuRef = useRef()
     const [text, setText] = useState("text-white");
-    const [lineColor, setLineColor] = useState("from-white to-white");
+    const [lineColor, setLineColor] = useState("md:from-white md:to-white from-black to-black");
     const location = useLocation();
 
 
@@ -21,6 +20,7 @@ export default function NavBar() {
         } else if (window.scrollY > 10) {
             setNavBg("bg-white")
             setText("text-black")
+            setLineColor("from-black to-black")
         }
     };
 
@@ -45,6 +45,7 @@ export default function NavBar() {
         } else {
             setNavBg("bg-white")
             setText("text-black")
+            setLineColor("from-black to-black")
         }
     }, [location]);
 
@@ -77,7 +78,7 @@ export default function NavBar() {
         <>
             <div
                 className={
-                    "navbar flex flex-col w-full fixed z-10 font-['Roboto'] transition-all duration-300 ease-in-out " +
+                    "navbar flex shadow-lg flex-col w-full fixed z-10 transition-all duration-300 ease-in-out " +
                     navBg
                 }
             >
@@ -88,21 +89,28 @@ export default function NavBar() {
                         className="peer invisible w-0 h-0 appearance-none"
                         ref={menuRef}
                     />
-                    <div className="w-full flex flex-row place-content-between items-center md:hidden block">
-                        <label className={`px-5 text-2xl text-black font-bold`}>
+                    <div className="w-full flex flex-row place-content-between items-center md:hidden">
+                        <div className="w-64 px-3 hover:cursor-pointer">
+                            <Link to="/"> <img src={logo} alt="logo" className="" /></Link>
+                        </div>
+                        {/* <label className={`px-5 text-2xl text-black font-bold`}>
                             Amhi Zadkari
-                        </label>
-                        <label for="menu" className="flex flex-col py-2 group" >
+                        </label> */}
+                        <label htmlFor="menu" className="flex flex-col py-2 group" >
                             <span className="border-t-2 border-black w-9 h-3 mt-3 mr-2"></span>
                             <span className="border-t-2 border-black w-9 h-3 mr-2"></span>
                             <span className="border-t-2 border-black w-9 h-3 mr-2"></span>
                         </label>
                     </div>
-                    <div className={`w-64 py-5 px-5 hidden text-2xl font-bold md:block ` + text}>
+                    <Link to="/" className="w-80 px-3 py-4 hover:cursor-pointer hidden md:block">
+                        <img src={logo} alt="logo" className="" />
+                    </Link>
+
+                    {/* <div className={`w-64 py-5 px-5 hidden text-2xl font-bold md:block ` + text}>
                         <p>Amhi Zadkari</p>
-                    </div>
+                    </div> */}
                     <nav
-                        className={`navitems flex w-full justify-end lg:pr-32 lg:justify-center md:flex hidden peer-checked:block peer-checked:bg-white md:py-2 `}
+                        className={`navitems hidden w-full justify-end lg:pr-32 lg:justify-center md:flex peer-checked:block peer-checked:bg-white md:py-2 `}
                     >
                         {routes.map((route) => {
                             return (

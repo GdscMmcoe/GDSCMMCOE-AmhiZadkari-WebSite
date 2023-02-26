@@ -9,6 +9,7 @@ import JoinUs from "./pages/JoinUsPage";
 import ErrorPage from "./pages/ErrorPage";
 import { getEvents } from "./firebase";
 import Footer from "./components/Footer";
+import "@fontsource/roboto";
 
 function App() {
     getEvents();
