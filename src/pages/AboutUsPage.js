@@ -55,7 +55,48 @@ export default function AboutUs() {
                     </div>
                 </div>
 
-                <div className="flex md:flex-row flex-col w-full text-justify pt-32">
+                <div className="flex w-full flex-row justify-end pt-4 py-4 my-4 self-center md:self-end">
+                    <div className='w-1/2 self-center pr-4 md:flex hidden justify-center'>
+                        <img src={treehand} className="w-64 h-64" />
+                    </div>
+                    <div className='w-full md:w-1/2 md:border-4 md:rounded-l-[4rem] px-8'>
+                        <p className="text-2xl font-medium pt-4 flex md:justify-start justify-center">
+                            Importance of Plantation! 
+                        </p>
+                        <p className="py-4 ">
+                            Plantation is one of the most important ways to combat environmental issues and maintain a sustainable planet. Plantation has multiple benefits and plays a critical role in supporting the health of our environment, as well as human society.
+                        </p>
+                        <p>
+                            It helps to combat climate change by absorbing carbon dioxide from the atmosphere, which is the primary cause of global warming. Trees are essential in this regard, as they absorb and store carbon dioxide, while also producing oxygen that is vital for humans and other living organisms to survive. 
+                        </p>
+                    </div>
+                </div>
+
+                <div className="flex w-full flex-row justify-end pt-4 py-4 my-4  self-center md:self-start">
+                    <div className='w-full md:w-1/2  md:border-4 md:rounded-r-[4rem] px-8'>
+                        <p className="text-2xl font-medium flex md:justify-start justify-center">
+                            What kind of things are we involved in? 
+                        </p>
+                        <p className="py-4 ">
+                        Our main objective being plantation, we are heavily involved in conducting plantation drives.
+                            We wish to progate and promote the inclusion of our own forgotten indigenous flora like banyan, peepal, neem, etc. 
+                            We perform plantations at schools, villages at citizens request. 
+                            We have also had people plant trees for their occassions such as birthday parties, weddings and much more also send them official reciepts. 
+                        </p>
+                    </div>
+                    <div className='w-1/2 self-center pl-4 md:flex hidden justify-center'>
+                        <img src={treehand} className="w-64 h-64" />
+                    </div>
+                </div>
+
+            </div>
+        </>
+    );
+}
+
+
+/* 
+<div className="flex md:flex-row flex-col w-full text-justify pt-32">
                     <div className='w-full px-4 lg:px-32'>
                         <p className="text-2xl font-medium flex justify-center">
                             Importance of plantation
@@ -88,7 +129,4 @@ export default function AboutUs() {
                         </p>
                     </div>
                 </div>
-            </div>
-        </>
-    );
-}
+*/
