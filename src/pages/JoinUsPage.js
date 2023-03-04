@@ -24,8 +24,8 @@ export default function JoinUs() {
                 WANT TO <span className="text-green-600">&nbsp;CONTRIBUTE?</span>
             </p>
 
-            <div className="mt-8">
-                <p className="px-8 text-xl">Send us a message!</p>
+            <div className="mt-8 flex flex-col">
+                <p className="px-8 text-xl self-center py-2">Send us a message!</p>
                 <form className="join-form" onSubmit={onContactFormSubmit}>
                     <div className="flex flex-col md:flex-row items-center justify-center">
                         <input type="text" name="name" placeholder="Name" required className="border h-10 w-11/12 md:w-64 mx-4 my-4 px-2 rounded-md border-gray-600" value={contactInfo.name} onChange={handleChange} />

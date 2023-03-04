@@ -1,49 +1,48 @@
-import treehand from '../assets/images/icons/treehand.png';
-
+import tree from '../assets/images/icons/tree.gif'
 
 
 export default function AboutUs() {
     return (
         <>
             <div className="py-24 w-full flex flex-col">
-                <p className='self-center font-extrabold text-5xl'>OUR JOURNEY</p>
+                <p className='self-center font-extrabold text-5xl'>OUR <span className='text-green-600'>JOURNEY</span></p>
 
-                <div className="flex w-full flex-row justify-end pt-8 py-4 my-4 self-center md:self-start">
-                    <div className="w-full md:w-1/2 md:border-4 md:rounded-r-[4rem] px-8 ">
+                <div className="flex w-full flex-row justify-end items-center pt-16 py-4 my-4 md:self-start">
+                    <div className="w-full md:w-1/2 md:border-4 md:rounded-r-[4rem] px-8 py-2">
                         <p className="text-2xl font-medium flex md:justify-start justify-center pt-4">
                             What is Zadkari?
                         </p>
-                        <p className="py-4 ">
+                        <p className="py-4 text-lg">
                             AmhiZadkari is a government-registered NGO that focuses mostly on tree conservation and plantation. Our main goal is to locate uninhabited areas where large, traditional, jungle-like trees can grow in order to compensate for the natural environment's ongoing loss of forest cover. At this stage, we look at plantations on numerous locations around Maharashtra. We also offer a variety of tree-related events, such as gatherings to collect seeds, spread awareness, and more.
                             The AmhiZadkari community is made up of like-minded, nature-loving folks who have teamed together to work towards the plantation revolution. The organisation is entirely run by volunteers, and all of the participants are extremely focused and self-motivated, ensuring that passion never dries up, as our plants never dry up.
                         </p>
                     </div>
                     <div className='w-1/2 self-center pl-4 md:flex hidden justify-center'>
-                        <img src={treehand} className="w-64 h-64" />
+                        <img src={tree} className="w-80 h-64" />
                     </div>
                 </div>
 
-                <div className="flex w-full flex-row justify-end pt-4 py-4 my-4 self-center md:self-end">
+                <div className="flex w-full flex-row justify-end items-center pt-4 py-4 my-4  md:self-end">
                     <div className='w-1/2 self-center pr-4 md:flex hidden justify-center'>
-                        <img src={treehand} className="w-64 h-64" />
+                        <img src={tree} className="w-80 h-64" />
                     </div>
-                    <div className='w-full md:w-1/2 md:border-4 md:rounded-l-[4rem] px-8'>
+                    <div className='w-full md:w-1/2 md:border-4 md:rounded-l-[4rem] px-8 py-2'>
                         <p className="text-2xl font-medium pt-4 flex md:justify-start justify-center">
                             How Zadkari came to existence?
                         </p>
-                        <p className="py-4 ">
+                        <p className="py-4 text-lg">
                             The current environmental challenges are where it all begins. Sea level rise, harsh weather conditions, and a decline in biodiversity are all being brought on by the rising global temperatures brought on by greenhouse gas emissions.
                             The loss of forests is the most significant of all. The destruction of forests for cattle, development, and agriculture is a factor in the decline of biodiversity and habitats. Our goal at Zadkari is to stop deforestation and climate change in their tracks and reverse their impacts.
                         </p>
                     </div>
                 </div>
 
-                <div className="flex w-full flex-row justify-end pt-4 py-4 my-4  self-center md:self-start">
-                    <div className='w-full md:w-1/2  md:border-4 md:rounded-r-[4rem] px-8'>
+                <div className="flex w-full flex-row justify-end items-center pt-4 py-4 my-4 md:self-start">
+                    <div className='w-full md:w-1/2  md:border-4 md:rounded-r-[4rem] px-8 py-2'>
                         <p className="text-2xl font-medium flex md:justify-start justify-center">
                             Our motto
                         </p>
-                        <p className="py-4 ">
+                        <p className="py-4 text-lg">
                             We at Zadkari focus mostly on tree plantations and all associated responsibilities.
                             The main concept of this organisation is to prevent the issues caused by deforestation by coming together and nurturing our Mother Nature.
                             We take efforts in promoting afforestation and also encourage people to join us. Our team is mostly made up of volunteers who are passionate about saving the earth from adverse effects of problems that we humans have created.
@@ -51,41 +50,40 @@ export default function AboutUs() {
                         </p>
                     </div>
                     <div className='w-1/2 self-center pl-4 md:flex hidden justify-center'>
-                        <img src={treehand} className="w-64 h-64" />
+                        <img src={tree} className="w-80 h-64" />
                     </div>
                 </div>
 
-                <div className="flex w-full flex-row justify-end pt-4 py-4 my-4 self-center md:self-end">
+                <div className="flex w-full flex-row justify-end items-center pt-4 py-4 my-4 self-center md:self-end">
                     <div className='w-1/2 self-center pr-4 md:flex hidden justify-center'>
-                        <img src={treehand} className="w-64 h-64" />
+                        <img src={tree} className="w-80 h-64" />
                     </div>
-                    <div className='w-full md:w-1/2 md:border-4 md:rounded-l-[4rem] px-8'>
+                    <div className='w-full md:w-1/2 md:border-4 md:rounded-l-[4rem] px-8 py-2'>
                         <p className="text-2xl font-medium pt-4 flex md:justify-start justify-center">
-                            Importance of Plantation! 
+                            Importance of Plantation!
                         </p>
-                        <p className="py-4 ">
+                        <p className="py-4 text-lg">
                             Plantation is one of the most important ways to combat environmental issues and maintain a sustainable planet. Plantation has multiple benefits and plays a critical role in supporting the health of our environment, as well as human society.
+                            It helps to combat climate change by absorbing carbon dioxide from the atmosphere, which is the primary cause of global warming. Trees are essential in this regard, as they absorb and store carbon dioxide, while also producing oxygen that is vital for humans and other living organisms to survive.
                         </p>
-                        <p>
-                            It helps to combat climate change by absorbing carbon dioxide from the atmosphere, which is the primary cause of global warming. Trees are essential in this regard, as they absorb and store carbon dioxide, while also producing oxygen that is vital for humans and other living organisms to survive. 
-                        </p>
+
                     </div>
                 </div>
 
-                <div className="flex w-full flex-row justify-end pt-4 py-4 my-4  self-center md:self-start">
-                    <div className='w-full md:w-1/2  md:border-4 md:rounded-r-[4rem] px-8'>
+                <div className="flex w-full flex-row justify-end pt-4 py-4 my-4  items-center md:self-start">
+                    <div className='w-full md:w-1/2  md:border-4 md:rounded-r-[4rem] px-8 py-2'>
                         <p className="text-2xl font-medium flex md:justify-start justify-center">
-                            What kind of things are we involved in? 
+                            What kind of things are we involved in?
                         </p>
-                        <p className="py-4 ">
-                        Our main objective being plantation, we are heavily involved in conducting plantation drives.
-                            We wish to progate and promote the inclusion of our own forgotten indigenous flora like banyan, peepal, neem, etc. 
-                            We perform plantations at schools, villages at citizens request. 
-                            We have also had people plant trees for their occassions such as birthday parties, weddings and much more also send them official reciepts. 
+                        <p className="py-4 text-lg">
+                            Our main objective being plantation, we are heavily involved in conducting plantation drives.
+                            We wish to progate and promote the inclusion of our own forgotten indigenous flora like banyan, peepal, neem, etc.
+                            We perform plantations at schools, villages at citizens request.
+                            We have also had people plant trees for their occassions such as birthday parties, weddings and much more also send them official reciepts.
                         </p>
                     </div>
                     <div className='w-1/2 self-center pl-4 md:flex hidden justify-center'>
-                        <img src={treehand} className="w-64 h-64" />
+                        <img src={tree} className="w-80 h-64" />
                     </div>
                 </div>
 
