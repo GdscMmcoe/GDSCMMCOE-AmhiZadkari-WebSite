@@ -7,7 +7,7 @@ export default function Footer() {
                         <span className="material-symbols-outlined mx-4">
                             call
                         </span>
-                        <p>+91number</p>
+                        <p>+91 9529968388</p>
                     </div>
 
                     <div className="email flex flex-row py-8">
