@@ -19,7 +19,21 @@ export default function JoinUs() {
     }
 
     return (
+        <>
         <div className="py-24">
+            <p className="w-full flex flex-row justify-center text-4xl">
+                WANT TO <span className="text-green-600">&nbsp;Volunteer?</span>
+            </p>
+{/* Link this button below to a google form that will be taken from the org and when user clicks the button then he will be redirected to fill that form.  */}
+            <div class="flex flex-wrap"> 
+                <div class="w-full py-0.5rem">
+                    <div className="flex justify-center w-full mt-8">
+                        <input type="submit" value="Click Here" className="border px-10 py-2 bg-green-600 text-white text-lg" />
+                    </div>
+                </div>
+            </div>
+
+
             <p className="w-full flex flex-row justify-center text-4xl">
                 WANT TO <span className="text-green-600">&nbsp;CONTRIBUTE?</span>
             </p>
@@ -40,8 +54,18 @@ export default function JoinUs() {
                     </div>
                 </form>
 
+                {/* <div class="flex flex-wrap">
+                    <div class="w-full sm:w-1/2 mb-4">
+                        <div className="flex justify-center w-full mt-8">
+                            <input type="submit" value="Join Us" className="border px-10 py-2 bg-green-600 text-white text-lg" />
+                        </div>
+                    </div>
+                </div> */}
+
             </div>
         </div>
+
+        </>
 
     );
 }
