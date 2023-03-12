@@ -1,6 +1,6 @@
 import { useEffect, useState, useRef } from "react";
 import { Link, useLocation } from "react-router-dom";
-// import logo from "../assets/images/icons/banner1-crop.png"
+import logo from "../assets/images/icons/banner1-crop.png"
 import Zadkari_1 from "../assets/images/icons/Zadkari_1.png";
 import Zadkari_2 from "../assets/images/icons/Zadkari_2.png";
 
