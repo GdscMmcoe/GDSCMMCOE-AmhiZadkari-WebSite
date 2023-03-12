@@ -1,6 +1,8 @@
 import { useEffect, useState, useRef } from "react";
 import { Link, useLocation } from "react-router-dom";
 import logo from "../assets/images/icons/banner1-crop.png"
+import Zadkari_1 from "../assets/images/icons/Zadkari_1.png";
+import Zadkari_2 from "../assets/images/icons/Zadkari_2.png";
 
 
 export default function NavBar() {
@@ -102,8 +104,9 @@ export default function NavBar() {
                             <span className="border-t-2 border-black w-9 h-3 mr-2"></span>
                         </label>
                     </div>
-                    <Link to="/" className="w-80 px-3 py-4 hover:cursor-pointer hidden md:block">
-                        <img src={logo} alt="logo" className="" />
+                    <Link to="/" className="w-40 px-3 py-4 hover:cursor-pointer hidden md:block">
+                        {/* <img src={Zadkari_1} alt="logo" className="" /> */}
+                        <img src={Zadkari_2} alt="logo" className="" />
                     </Link>
 
                     {/* <div className={`w-64 py-5 px-5 hidden text-2xl font-bold md:block ` + text}>
