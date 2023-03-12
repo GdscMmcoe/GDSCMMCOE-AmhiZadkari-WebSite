@@ -96,7 +96,7 @@ export default function NavBar() {
                         ref={menuRef}
                     />
                     <div className="w-full flex flex-row place-content-between items-center md:hidden">
-                        <div className="w-64 px-3 hover:cursor-pointer">
+                        <div className="w-32 px-3 hover:cursor-pointer">
                             <Link to="/"> <img src={Zadkari_1} alt="logo" className="w-24" /></Link>
                         </div>
 
@@ -106,8 +106,8 @@ export default function NavBar() {
                             <span className="border-t-2 border-black w-9 h-3 mr-2"></span>
                         </label>
                     </div>
-                    <Link to="/" className="w-24 px-3 py-4 hover:cursor-pointer hidden md:block">
-                        <img src={logo} alt="logo" className="w-24" />
+                    <Link to="/" className="w-64 px-3 hover:cursor-pointer hidden md:block">
+                        <img src={logo} alt="logo" className="w-20 pt-2" />
                     </Link>
                     <nav
                         className={`navitems hidden w-full justify-end lg:pr-32 lg:justify-center md:flex peer-checked:block peer-checked:bg-white md:py-2 `}

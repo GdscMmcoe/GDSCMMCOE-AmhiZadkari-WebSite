@@ -1,8 +1,8 @@
 import forest from "../assets/videos/forest.mov";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import img9 from '../assets/images/photos/8.jpg'
+import icon from '../assets/images/photos/8.jpg' // placeholder import, to be removed
 import { Link } from "react-router-dom";
-import icon from "../assets/images/icons/icon.png";
 import { useEffect, useState } from "react";
 import EventCard from "../components/EventCard";
 
