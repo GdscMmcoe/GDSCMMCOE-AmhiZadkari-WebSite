@@ -57,7 +57,7 @@ export default function HomePage() {
                             Amhi Zadkari
                         </p>
                         <p className="md:pl-16 text-3xl text-left underline underline-offset-3">
-                            निसर्ग वेड्यांची चळवळ
+                            एक निसर्गवेड्यांची चळवळ.
                         </p>
                     </div>
                 </div>
