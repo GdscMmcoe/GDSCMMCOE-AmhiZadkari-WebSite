@@ -1,12 +1,13 @@
 import { useEffect, useState, useRef } from "react";
 import { Link, useLocation } from "react-router-dom";
-import logo from "../assets/images/icons/banner1-crop.png"
+// import logo from "../assets/images/icons/banner1-crop.png"
 import Zadkari_1 from "../assets/images/icons/Zadkari_1.png";
 import Zadkari_2 from "../assets/images/icons/Zadkari_2.png";
 
 
 export default function NavBar() {
     const [navBg, setNavBg] = useState("");
+    const [navLogo, setNavLogo] = useState("");
     const menuRef = useRef()
     const [text, setText] = useState("text-white");
     const [lineColor, setLineColor] = useState("md:from-white md:to-white from-black to-black");
@@ -18,11 +19,13 @@ export default function NavBar() {
         if (window.scrollY <= 10) {
             setNavBg("bg-white md:bg-transparent")
             setText("text-black md:text-white")
+            // setNavLogo(<img src={Zadkari_2}/>)
 
         } else if (window.scrollY > 10) {
             setNavBg("bg-white")
             setText("text-black")
             setLineColor("from-black to-black")
+            // setNavLogo(<img src={Zadkari_1}/>)
         }
     };
 
@@ -93,7 +96,7 @@ export default function NavBar() {
                     />
                     <div className="w-full flex flex-row place-content-between items-center md:hidden">
                         <div className="w-64 px-3 hover:cursor-pointer">
-                            <Link to="/"> <img src={logo} alt="logo" className="" /></Link>
+                            <Link to="/"> <img src={Zadkari_1} alt="logo" className="" /></Link>
                         </div>
                         {/* <label className={`px-5 text-2xl text-black font-bold`}>
                             Amhi Zadkari
@@ -104,7 +107,7 @@ export default function NavBar() {
                             <span className="border-t-2 border-black w-9 h-3 mr-2"></span>
                         </label>
                     </div>
-                    <Link to="/" className="w-40 px-3 py-4 hover:cursor-pointer hidden md:block">
+                    <Link to="/" className="w-20 px-3 py-4 hover:cursor-pointer hidden md:block">
                         {/* <img src={Zadkari_1} alt="logo" className="" /> */}
                         <img src={Zadkari_2} alt="logo" className="" />
                     </Link>
