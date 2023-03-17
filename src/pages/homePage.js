@@ -64,7 +64,7 @@ export default function HomePage() {
             </div>
 
             <div className="info-title pt-16 w-full flex justify-center text-4xl font-bold underline underline-offset-8 pb-4 decoration-green-600">
-                <p>welcome to</p> <p className="text-green-600">&nbsp;Amhi Zadkari</p>
+                <p>WELCOME TO</p> <p className="text-green-600">&nbsp;Amhi Zadkari</p>
             </div>
             <div className="info-text pt-1 w-full flex flex-col justify-center items-center text-justify text-xl px-16 lg:px-80">
                 <p>
