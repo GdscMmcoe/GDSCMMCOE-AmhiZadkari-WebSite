@@ -1,7 +1,9 @@
 import forest from "../assets/videos/forest.mov";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import img9 from '../assets/images/photos/8.jpg'
-import icon from '../assets/images/photos/8.jpg' // placeholder import, to be removed
+import event from '../assets/event.png'
+import tree from '../assets/trees.png'
+import volunteer from '../assets/volunteer.png'
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import EventCard from "../components/EventCard";
@@ -87,37 +89,31 @@ export default function HomePage() {
             </div>
 
             <div className="team-numbers w-full flex justify-center relative">
-                <img src={img9} className="opacity-80" alt=""></img>
+                <img src={img9} className="opacity-80 blur-[2px]" alt=""></img>
 
-                <div className="absolute top-24 lg:top-56 md:top-64 lg:px-32 flex flex-row w-full place-content-evenly">
-                    <div className="card flex flex-col">
-                        <img className="icon w-12 h-12" src={icon}></img>
-                        <p className="number font-bold italic text-2xl">
-                            42069+
-                        </p>
-                        <p className="number font-bold italic text-2xl">
+                <div className="absolute top-24 lg:top-56 md:top-64 lg:px-32 flex flex-row w-full place-content-evenly text-center">
+                    <div className="card flex flex-col items-center">
+                        <img className="icon w-12 h-12" src={tree}></img>
+                        <p className="number font-bold italic text-2xl" style={{"text-shadow":"1.5px 1.5px 1.5px white"}}>
+                            999+ <br/>
                             Trees <br />
                             planted
                         </p>
                     </div>
-                    <div>
-                        <img className="icon w-12 h-12" src={icon}></img>
-                        <p className="number font-bold italic text-2xl">
-                            42069+
-                        </p>
-                        <p className="number font-bold italic text-2xl">
-                            Trees <br />
-                            planted
+                    <div className="card flex flex-col items-center"> 
+                        <img className="icon w-12 h-12" src={volunteer}></img>
+                        <p className="number font-bold italic text-2xl" style={{"text-shadow":"1.5px 1.5px 1.5px white"}}>
+                            149+ <br />
+                            Volunteers <br />
+                            Engaged
                         </p>
                     </div>
-                    <div>
-                        <img className="icon w-12 h-12" src={icon}></img>
-                        <p className="number font-bold italic text-2xl">
-                            42069+
-                        </p>
-                        <p className="number font-bold italic text-2xl">
-                            Trees <br />
-                            planted
+                    <div className="card flex flex-col items-center">
+                        <img className="icon w-12 h-12" src={event}></img>
+                        <p className="number font-bold italic text-2xl" style={{"text-shadow":"1.5px 1.5px 1.5px white"}}>
+                            65+ <br />
+                            Number of <br />
+                            Events
                         </p>
                     </div>
                 </div>

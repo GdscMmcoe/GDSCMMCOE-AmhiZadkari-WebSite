@@ -14,7 +14,7 @@ export default function Footer() {
                         <span className="material-symbols-outlined mx-4">
                             mail
                         </span>
-                        <p>example@123.com</p>
+                        <p>amhizadkari@gmail.com</p>
                     </div>
                 </div>
                 <div className="col-2 flex flex-col">
